@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tikerwebproflie">
+  <title>Tikerwebproflie</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Sarabun&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="#home" class="logo">Tiker<span>Profile</span></a>
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="myGallery" id="myGallery">
+    <div class="myGallery-contant">
+      <h1>My Gallery</h1>
+    </div>
+    <div class="gallery">
+      <img src="./image/G1.jpg" alt="img" class="gallery-img" />
+      <img src="./image/G4.JPG" alt="img" class="gallery-img" style="object-position:  30% 20%;" />
+      <img src="./image/G3.JPG" alt="img" class="gallery-img" />
+      <img src="./image/G2.JPG" alt="img" class="gallery-img" />
+      <img src="./image/G5.JPG" alt="img" class="gallery-img" style="object-position:  20% 80%;"/>
+      <img src="./image/G6.JPG" alt="img" class="gallery-img" />
+    </div>
+  </section>
+
+  <section class="myGallery-vertical" id="verticalGallery">
+  <div class="myGallery-contant">
+    <h1>Vertical Gallery</h1>
+  </div>
+  <div class="gallery-vertical">
+    <img 
+      src="./image/G7.JPG" 
+      alt="vertical-1"
+    >
+    <img 
+      src="./image/G8.JPG" 
+      alt="vertical-2"
+    >
+    <img 
+      src="./image/G9.JPG" 
+      alt="vertical-3"
+    >
+    <img 
+      src="./image/G10.JPG" 
+      alt="vertical-4"
+    >
+    
+  </div>
+</section>
+
+
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-bg"></div>
+    <img id="modal-img" src="" alt="Enlarged Image" />
+  </div>
+
+  <footer class="footer">
+    <div class="social">
+      <a href="https://www.instagram.com/tikerdevaux/"><i class="bx bxl-instagram-alt"></i></a>
+      <a href="https://github.com/TikerTray"><i class="bx bxl-github"></i></a>
+      <a href="#"><i class="bx bxl-twitter"></i></a>
+    </div>
+
+    <ul class="list">
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="copyright">© 2025 Tiker Profile | Website inspired by How to Web Dev tutorial. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    const images = document.querySelectorAll(".gallery-img");
+
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        modal.classList.add("open");
+        modalImg.src = img.src;
+      });
+    });
+
+    modal.addEventListener("click", () => {
+      modal.classList.remove("open");
+    });
+  </script>
+</body>
+</html>
